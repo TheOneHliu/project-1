@@ -88,7 +88,7 @@ for item in area_codes:
     print(item)
 
 count = 0
-count2 = 0;
+count2 = 0
 for item in calls:
     if is_bangalore(item[0]):
         if is_bangalore(item[1]):
