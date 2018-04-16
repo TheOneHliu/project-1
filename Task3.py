@@ -88,10 +88,14 @@ for item in area_codes:
     print(item)
 
 count = 0
+count2 = 0;
 for item in calls:
-    if is_bangalore(item[0]) and is_bangalore(item[1]):
+    if is_bangalore(item[0]):
+        if is_bangalore(item[1]):
+            count2 += 1
         count += 1
-percent = count*100/len(calls)
+if count > 0:
+    percent = count2*100/count
 print("%.2f percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore." % percent)
 
 
